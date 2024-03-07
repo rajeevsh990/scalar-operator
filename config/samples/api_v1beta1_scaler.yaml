@@ -1,0 +1,17 @@
+apiVersion: api.rajeevsh990.online/v1beta1
+kind: Scaler
+metadata:
+  labels:
+    app.kubernetes.io/name: scaler
+    app.kubernetes.io/instance: scaler-sample
+    app.kubernetes.io/part-of: scaler-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: scaler-operator
+  name: scaler-sample
+spec:
+  start: 8
+  end: 18
+  replicas: 2
+  deployment: 
+    - name: nginx
+      namespace: scaler
